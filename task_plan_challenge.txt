@@ -1,0 +1,72 @@
+
+This challenge should be implemented using ansible as configuration management and terraform as IaC tool. Your final work should be delivered in a git repository that will hold all the configuration files that will be applied in a clean aws account. In case you want you can describe in the readme the process to provision the environment. The goal is to end up with a fully functional environment.
+
+Guidelines:
+
+1 - You should deliver the work in a git repo with partial commits, in order to see the evolution of your code and the line of thinking. You can either share the repository url or share a .tar.gz file with the .git folder inside.
+
+2 - You should deploy in the environment a service running 2 "replicas" (suggestion https://hub.docker.com/r/bharathshetty4/supermario). You can choose the runtime you want (ec2, ecs, k8s, lambda, etc...).
+
+3 - You can use the ingress for service traffic you want.
+
+4 - Remember the goal is to have all the configuration as code and the only thing we expect is that to run the environment we just need to export the AWS keys and run your playbook.
+
+5 - You are free to choose the methods to achieve the goal, only the use of the tools supra mentioned is mandatory.
+
+6 - Mandatory requirements:
+    You should use ansible as configuration management tool;
+    You should use terraform as infrastructure as code tool;
+    You should include a setup of a vpc/subnets;
+    Service should be public reachable;
+    Your commits should be signed.
+    File formatting and linting is important
+
+
+
+
+
+Ansible - configuration management tool
+Terraform - IaC tool
+Git Repository - 
+
+
+
+TASK 1 - Install Environment
+1.1 - Install OS ->DONE
+1.2 - Install sw packages->DONE
+1.2.1 - Scripts for packages checks->DONE
+1.3 - Create AWS account->DONE
+1.3.1 - Obtain aws keys->DONE
+
+TASK 2 - Test Enviroment
+2.1 - Deploy local container->DONE
+2.2 - Test local container ->DONE
+2.3 - Test Mario container->DONE
+2.4 - Test replicas container
+
+TASK 3 - Cloud AWS Enviroment
+3.1 - Understand ec2->DONE
+3.2 - Connect to Public IP->DONE
+
+TASK 4 - Create Git 
+4.1 - Create local git->DONE
+4.2 - Create remote git on github->DONE
+
+TASK 5 - Test Cloud Enviroment (local created AMI)
+5.1 - Install sw -> DONE
+5.2 - Run container -> DONE
+5.3 - Test public access to container -> DONE
+
+TASK 6 - Build deploy tools
+6.1 - Build terraform config
+	6.1.1 - Default Configs -> DONE
+	6.1.2 - Specific config VPC -> DONE
+	6.1.3 - Specific config SSH -> DONE
+6.2 - Build ansible config
+6.3 - Test cloud instance
+
+
+
+
+
+
