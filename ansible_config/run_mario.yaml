@@ -7,4 +7,4 @@
       docker_container: 
         name: SuperMario
         image: bharathshetty4/supermario
-        ports: ["80:8600"]
+        ports: ["80:8080"]

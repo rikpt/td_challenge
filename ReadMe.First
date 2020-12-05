@@ -1,3 +1,30 @@
 ### TALKDESK ###
 
+The Plan
+I divided the challenge in tasks.
+They are in the task_plan_challenge.txt file
 
+The Enviroment
+I needed a dev machine. So I changed my Kali machine to a CentOS machine and install all the necessary stuff.
+The ideia was to have the challenge working in my machine and then on the cloud.
+I create a free tier account on AWS to develop this
+
+The Cloud
+I choose AWS on two details:
+- the challenge description mention of AWC keys
+- in my current job I don't use AWS so the challenge was even more fun
+
+The Challenge
+It can be start using the launch_td_challenge.sh
+The basic idea is use Terraform to obtain the ec2 instance and install the software.
+Then the ansible play only launches the docker service.
+
+Testing
+It was tested at minimum. I'm sure it has some bugs that escaped me.
+
+Pre-conditions
+- terraform will create the ec2 machine on eu-west-2 zone 
+- the main.tf has, directly inserted, my aws key. I'm aware that the challenge description states that "we just need to export the AWS keys and run your playbook"
+- a manual step is needed to work. After terraform, from the master machine, an initial ssh connection is needed in order to obtain the ssh keys and placed them on the known hosts. The Public IP is an output of the terraform apply.
+Can also be checked with terraform show.
+The command is : ssh -i /root/my_key.pem ec2-user@ec2-<my_ec2_public_ip>.eu-west-2.compute.amazonaws.com
