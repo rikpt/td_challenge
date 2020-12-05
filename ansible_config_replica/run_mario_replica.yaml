@@ -1,0 +1,11 @@
+--- 
+- 
+  hosts: all
+  tasks: 
+    - 
+      name: initialize docker swarm
+      shell: docker swarm init
+
+    - 
+      name: start replica
+      shell: docker service create --replicas 2 --name SuperMario -p 80:8080 bharathshetty4/supermario

@@ -27,7 +27,7 @@ Guidelines:
 
 Ansible - configuration management tool
 Terraform - IaC tool
-Git Repository - 
+Git Repository - as repo
 
 
 
@@ -38,11 +38,11 @@ TASK 1 - Install Environment
 1.3 - Create AWS account->DONE
 1.3.1 - Obtain aws keys->DONE
 
-TASK 2 - Test Enviroment
+TASK 2 - Test Local Enviroment
 2.1 - Deploy local container->DONE
 2.2 - Test local container ->DONE
 2.3 - Test Mario container->DONE
-2.4 - Test replicas container
+2.4 - Test replicas container -> DONE
 
 TASK 3 - Cloud AWS Enviroment
 3.1 - Understand ec2->DONE
@@ -62,8 +62,15 @@ TASK 6 - Build deploy tools
 	6.1.1 - Default Configs -> DONE
 	6.1.2 - Specific config VPC -> DONE
 	6.1.3 - Specific config SSH -> DONE
-6.2 - Build ansible config
-6.3 - Test cloud instance
+6.2 - Build ansible config -> DONE
+	6.2.1 - Single instance ->DONE
+	6.2.2 - Replicated instance -> DONE
+
+TASK 7 - Test cloud instance
+7.1 - Test ec2 -> DONE
+7.2 - Test environment after terraform -> DONE
+7.3 - Test docker single instance -> DONE
+7.4 - Test docker replica instance (docker service) -> DONE
 
 
 
